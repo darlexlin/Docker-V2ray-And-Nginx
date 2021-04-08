@@ -10,8 +10,9 @@ RUN apt-get update -y && \
 
 WORKDIR /config
 
-RUN ln -s /config/nginx /etc/nginx/conf/conf.d && \
-    ln -s /config/v2ray /etc/v2ray
+RUN ln -s /config/nginx /etc/nginx && \
+    ln -s /config/v2ray /etc/v2ray && \
+    ln -s /config/www /home/wwwroot
 
 VOLUME /sf/seafile-data
 
