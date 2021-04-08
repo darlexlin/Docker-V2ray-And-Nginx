@@ -14,6 +14,6 @@ RUN ln -s /config/nginx /etc/nginx && \
     ln -s /config/v2ray /etc/v2ray && \
     ln -s /config/www /home/wwwroot
 
-VOLUME /sf/seafile-data
+VOLUME /config
 
-CMD ["./start.sh"]
+CMD ["nginx" "-g" "daemon off;"]
