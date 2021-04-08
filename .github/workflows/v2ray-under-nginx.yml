@@ -4,11 +4,11 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# https://github.com/darlexlin/docker-seafile-cli
-# Description: Build Docker for seafile-cli
+# https://github.com/darlexlin/v2ray-under-nginx
+# Description: Build Docker for V2ray Under Nginx
 #
 
-name: Seafile Client For Command Only
+name: V2ray Under Nginx
 
 on:
   workflow_dispatch:
@@ -18,7 +18,6 @@ on:
         required: true
 
 env:
-#  TAG: 7.0.10
   TZ: Asia/Shanghai
 
 jobs:
@@ -46,5 +45,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            darlexlin/seafile-client:latest
-            darlexlin/seafile-client:${{ github.event.inputs.tag }}
+            darlexlin/v2ray-under-nginx:latest
+            darlexlin/v2ray-under-nginx:${{ github.event.inputs.tag }}
