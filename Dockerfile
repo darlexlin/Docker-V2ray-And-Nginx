@@ -5,6 +5,7 @@ ENV PUID=1000 PGID=1000
 ENV TZ Asia/Shanghai
 
 WORKDIR /root
+COPY start.sh /root/start.sh
 RUN wget -q -O v2ray.sh "https://raw.githubusercontent.com/v2fly/docker/master/v2ray.sh"
 
 RUN set -ex && \
@@ -21,4 +22,4 @@ RUN ln -s /config/nginx /etc/nginx && \
 
 VOLUME /config
 
-CMD ["./start.sh"]
+CMD ["/root/start.sh"]
