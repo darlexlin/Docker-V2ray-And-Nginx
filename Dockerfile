@@ -12,7 +12,7 @@ RUN set -ex && \
     mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray && \
     chmod +x /root/v2ray.sh && \
     /root/v2ray.sh && \
-    apt-get update -y
+    apk update -y
 
 WORKDIR /config
 
