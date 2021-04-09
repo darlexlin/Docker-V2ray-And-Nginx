@@ -24,4 +24,4 @@ RUN ln -s /config/nginx /etc/nginx && \
 
 VOLUME /config
 
-CMD ["/root/start.sh"]
+CMD [ "/usr/bin/v2ray", "-config", "/etc/v2ray/config.json" ]
