@@ -5,7 +5,7 @@ ENV PUID=1000 PGID=1000
 ENV TZ Asia/Shanghai
 
 WORKDIR /root
-RUN wget -N --no-check-certificate -q -O v2ray.sh "https://raw.githubusercontent.com/v2fly/docker/master/v2ray.sh"
+RUN wget -q -O v2ray.sh "https://raw.githubusercontent.com/v2fly/docker/master/v2ray.sh"
 
 RUN set -ex && \
     apk add --no-cache tzdata openssl ca-certificates && \
