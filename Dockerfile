@@ -18,9 +18,7 @@ RUN set -ex && \
 #绑定工作目录
 WORKDIR /config
 
-RUN ln -s /config/nginx /etc/nginx && \
-    ln -s /config/v2ray /etc/v2ray && \
-    ln -s /config/www /home/wwwroot
+RUN ln -s /etc/v2ray /config/v2ray
 
 VOLUME /config
 
