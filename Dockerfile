@@ -1,12 +1,18 @@
-FROM phusion/baseimage:18.04-1.0.0-amd64
+﻿FROM linuxserver/nginx
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV PUID=1000 PGID=1000
 ENV TZ Asia/Shanghai
 
-RUN apt-get update -y && \
-    apt-get install -y wget tzdata && \
-    wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
+WORKDIR /root
+RUN wget -N --no-check-certificate -q -O v2ray.sh "https://raw.githubusercontent.com/v2fly/docker/master/v2ray.sh"
+
+RUN set -ex && \
+    apk add --no-cache tzdata openssl ca-certificates && \
+    mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray && \
+    chmod +x /root/v2ray.sh && \
+    /root/v2ray.sh && \
+    apt-get update -y
 
 WORKDIR /config
 
@@ -16,4 +22,4 @@ RUN ln -s /config/nginx /etc/nginx && \
 
 VOLUME /config
 
-CMD ["nginx" "-g" "daemon off;"]
+CMD [ "nginx" "-g" "daemon off;", "/usr/bin/v2ray", "-config", "/etc/v2ray/config.json" ]

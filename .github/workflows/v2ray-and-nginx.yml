@@ -1,14 +1,14 @@
-#
+﻿#
 # Copyright (c) 2020 Darlexlin <***>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# https://github.com/darlexlin/v2ray-under-nginx
-# Description: Build Docker for V2ray Under Nginx
+# https://github.com/darlexlin/v2ray-and-nginx
+# Description: Build Docker for V2ray And Nginx
 #
 
-name: V2ray Under Nginx
+name: V2ray And Nginx
 
 on:
   workflow_dispatch:
@@ -45,5 +45,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            darlexlin/v2ray-under-nginx:latest
-            darlexlin/v2ray-under-nginx:${{ github.event.inputs.tag }}
+            darlexlin/v2ray-and-nginx:latest
+            darlexlin/v2ray-and-nginx:${{ github.event.inputs.tag }}
