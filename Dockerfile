@@ -21,4 +21,4 @@ RUN ln -s /config/nginx /etc/nginx && \
 
 VOLUME /config
 
-CMD [ "nginx" "-g" "daemon off;", "/usr/bin/v2ray", "-config", "/etc/v2ray/config.json" ]
+CMD ["./start.sh"]
