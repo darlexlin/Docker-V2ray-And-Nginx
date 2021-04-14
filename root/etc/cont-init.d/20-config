@@ -2,7 +2,7 @@
 
 # 创建文件夹
 	mkdir -p \
-	/config/{nginx/site-confs,www/{default,proxy,website,reverse},v2ray,log/nginx,keys,log/php,php} \
+	/config/{nginx/site-confs,www/{default,proxy,website,reverse},v2ray,log/nginx,keys/{proxy,website,reverse},log/php,php} \
 	/run \
 	/var/lib/nginx/tmp/client_body \
 	/var/tmp/nginx
