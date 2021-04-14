@@ -21,10 +21,7 @@ RUN set -ex && \
 
 #绑定工作目录
 WORKDIR /config
+VOLUME /config
 
 #添加本地文件，赋予root权限
 COPY root/ /
-
-VOLUME /config
-
-CMD [ "/start.sh" ]
