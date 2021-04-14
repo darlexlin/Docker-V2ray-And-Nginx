@@ -19,5 +19,5 @@ RUN set -ex && \
     mv config.json /etc/v2ray/config.json && \
     rm -rf /tmp/*
 
-#添加本地文件，赋予root权限
+#添加本地文件
 COPY root/ /
