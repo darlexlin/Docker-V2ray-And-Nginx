@@ -1,7 +1,7 @@
 FROM linuxserver/nginx
 
 # 环境变量
-ENV PUID=1000 PGID=1000
+ENV PUID PGID
 ENV TZ Asia/Shanghai
 
 #下载并安装V2ray
@@ -18,10 +18,6 @@ RUN set -ex && \
     mv geosite.dat geoip.dat /usr/local/share/v2ray/ && \
     mv config.json /etc/v2ray/config.json && \
     rm -rf /tmp/*
-
-#绑定工作目录
-WORKDIR /config
-VOLUME /config
 
 #添加本地文件，赋予root权限
 COPY root/ /
