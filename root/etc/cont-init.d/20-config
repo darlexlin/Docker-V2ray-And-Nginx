@@ -20,7 +20,7 @@
 #	rm /config/www/index.html && \
 	cp /defaults/index.html /config/www/default/index.html && \
 #	cp /defaults/Donot-delete-me /config/www/default/Donot-delete-me && \	
-        cp -r /defaults/proxy/ /config/www/proxy
+        cp -r /defaults/proxy /config/www/
 [[ ! -f /config/v2ray/config.json ]] && \
 	cp /defaults/config.json /config/v2ray/config.json
 
