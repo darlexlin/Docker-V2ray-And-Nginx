@@ -1,6 +1,5 @@
-﻿FROM linuxserver/nginx
+FROM linuxserver/nginx
 
-ENV DEBIAN_FRONTEND noninteractive
 ENV PUID=1000 PGID=1000
 ENV TZ Asia/Shanghai
 
