@@ -7,12 +7,12 @@
   "inbounds": [
     {
       "port":8888,
-      "listen": "127.0.0.1", //只监听 127.0.0.1，避免除本机外的机器探测到开放了 10000 端口
+      "listen": "127.0.0.1", //只监听 127.0.0.1，避免除本机外的机器探测到开放端口
       "protocol": "vless", 
       "settings": {
         "clients": [
           {
-	  		"id":"de54a90c-9a71-11eb-a8b3-0242ac130003",
+	  		"id":"de54a90c-9a71-11eb-a8b3-0242ac130003",  //镜像启动后请务必更改此UUID
             "alterId": 0
           }
         ],
@@ -21,7 +21,7 @@
       "streamSettings": {
         "network": "ws", 
         "wsSettings": {
-	    "path":"/123456789/"
+	    "path":"/123456789/"  //镜像启动后请务必更改此path
         }
       }
     }
