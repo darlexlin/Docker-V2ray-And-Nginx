@@ -8,6 +8,7 @@
     {
       "port":8888,
       "listen": "127.0.0.1", //只监听 127.0.0.1，避免除本机外的机器探测到开放端口
+      "tag": "VLESS-in", 
       "protocol": "vless", 
       "settings": {
         "clients": [
@@ -31,6 +32,33 @@
       "protocol": "freedom", 
       "settings": { }, 
       "tag": "direct"
+     }, 
+    {
+      "protocol": "blackhole", 
+      "settings": { }, 
+      "tag": "blocked"
     }
-  ]
+  ], 
+  "dns": {
+    "servers": [
+      "https+local://1.1.1.1/dns-query",
+	  "1.1.1.1",
+	  "1.0.0.1",
+	  "8.8.8.8",
+	  "8.8.4.4",
+	  "localhost"
+    ]
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "VLESS-in"
+        ],
+        "outboundTag": "direct"
+      }
+    ]
+  }
 }
