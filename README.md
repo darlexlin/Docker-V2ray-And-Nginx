@@ -1,5 +1,9 @@
+﻿# 镜像内容
+
+此镜像引用自：linuxserver/nginx
 
 ## 模块版本
+
 Nginx和PHP会跟随linuxserver/nginx一同更新
 
 
