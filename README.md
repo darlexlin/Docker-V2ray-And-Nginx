@@ -1,4 +1,4 @@
-﻿# 镜像内容
+﻿## 镜像内容
 
 此镜像引用自：linuxserver/nginx
 
