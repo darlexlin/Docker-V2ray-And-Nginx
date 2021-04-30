@@ -6,6 +6,7 @@
 
 Nginx和PHP会跟随linuxserver/nginx一同更新
 
+V2ray版本按照tag号指定
 
 当前版本如下
 
