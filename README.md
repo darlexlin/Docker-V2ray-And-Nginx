@@ -2,7 +2,7 @@
 
 ## 镜像内容
 
-此镜像引用自：linuxserver/nginx
+此镜像引用自：linuxserver/nginx，加入了V2Ray模块内容，加入了部分网站及配置模板。
 
 ## 模块版本
 
