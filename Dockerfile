@@ -7,7 +7,7 @@ ENV TZ Asia/Shanghai
 #下载并安装V2ray
 WORKDIR /tmp
 #指定V2Ray版本
-ARG TAG="v4.38.3"
+ARG TAG="v4.40.1"
 RUN set -ex && \
     apk add --no-cache wget tzdata openssl ca-certificates --upgrade && \
     mkdir -p /etc/v2ray /usr/local/share/v2ray /var/log/v2ray && \
